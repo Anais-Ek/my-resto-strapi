@@ -1,4 +1,5 @@
-import Axios from 'axios';import React from 'react';
+import Axios from 'axios';
+import React from 'react';
 
 
 const url= "http://localhost:1337/api/navbar?populate=*"
