@@ -9,14 +9,13 @@ const Navbar = () => {
 
     React.useEffect(() => {
         Axios.get(url).then((response) => {
-            setLinks(response.data.data.attributes.Content);
+          setLinks(response.data.data.attributes.Navbar);
         });
     }, []);
 
   return (
-  <><div className='links_container'>
-      
-      <div className='links_container_right'>
+  <><div >
+      <div >
         {links ? (
           <ul className="links_box">
             {links.map((link) => (
