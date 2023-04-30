@@ -1,7 +1,6 @@
 import Axios from 'axios';import React from 'react';
 
 
-
 const url= "http://localhost:1337/api/navbar?populate=*"
 
 const Navbar = () => {
