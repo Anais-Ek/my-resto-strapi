@@ -1,34 +1,27 @@
 import Axios from 'axios';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-const url= "http://localhost:1337/api/navbar?populate=*"
+const url = "http://localhost:1337/api/navbar?populate=*";
 
 const Navbar = () => {
-    const [links, setLinks] = React.useState([]);
+  const [links, setLinks] = React.useState([]);
 
-    React.useEffect(() => {
-        Axios.get(url).then((response) => {
-          setLinks(response.data.data.attributes.Navbar);
-        });
-    }, []);
+  React.useEffect(() => {
+    Axios.get(url).then((response) => {
+      setLinks(response.data.data.attributes.Navbar);
+    });
+  }, []);
 
   return (
-  <><div >
-      <div >
-        {links ? (
-          <ul className="links_box">
-            {links.map((link) => (
-              <li key={link.id}><a className='link' href={link.Slug}>{link.Label}</a></li>
-            ))}
-          </ul>
-        ) : (
-          <p>Chargement...</p>
-        )}
-      </div>
-    </div>
-    </>
+    <ul>
+      {links.map(link => (
+        <li key={link?.id}>
+          <Link to={link?.Slug}>{link?.Label}</Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 
-export default Navbar
+export default Navbar;

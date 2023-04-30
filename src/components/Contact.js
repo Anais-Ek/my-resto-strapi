@@ -1,24 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import React from 'react';
 
-const url= "http://localhost:1337/api/contacts?populate=*"
+const Home = () => {
+  return (
+    <div>
+      <h1>Bienvenue sur la page de contact !</h1>
+    </div>
+  );
+};
 
-
-const App = () => {
-  const [links, setLinks] = React.useState([]);
-
-    React.useEffect(() => {
-        Axios.post(url).then((response) => {
-            setLinks(response.data.data.attributes);
-        });
-    }, []);
-
-    return (
-      <div className="App">
-        <p>TESTTT</p>
-      </div>
-    );
-  
-  };
-  
-  export default App;
+export default Home;
