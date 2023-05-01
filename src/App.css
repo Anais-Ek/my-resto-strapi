@@ -37,10 +37,14 @@
 
 .slogan {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  height: 200px;
-  padding-left: 32px;
-  background-color: blue;
-  text-align: center;
+  height: 190px;
+  background-color: #c7bdb1  ;
+}
+
+.slogan h1 {
+  font-size: 30px;
 }
 
