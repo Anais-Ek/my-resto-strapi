@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import "./Navbar.css";
 
 const url = "http://localhost:1337/api/navbar?populate=*";
 
@@ -21,16 +22,19 @@ const Navbar = () => {
   }, []);
 
   return (
+    <header>
+    <div class="logo">{restaurantName}</div>
     <nav>
-      <ul>
-      <h1>{restaurantName}</h1>
+      <div class="menu">
+
         {links.map(link => (
-          <li key={link?.id}>
+          <p key={link?.id}>
             <Link to={link?.Slug}>{link?.Label}</Link>
-          </li>
+          </p>
         ))}
-      </ul>
+      </div>
     </nav>
+    </header>
   );
 };
 

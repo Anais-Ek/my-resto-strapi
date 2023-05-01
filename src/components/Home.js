@@ -20,9 +20,19 @@ const App = () => {
     <div className="App">
       {posts.map((post) => (
         <div key={post?.id}>
-          <p>{post?.attributes?.slogan}</p>
-          <img src={`http://localhost:1337${post?.attributes?.logo_background?.data?.attributes?.url}`} alt="Logo Background" />
-          <h1>{post?.attributes?.restaurant?.data?.attributes?.name}</h1>
+          <section class="banner">
+            <div class="content">
+              <h1>{post?.attributes?.restaurant?.data?.attributes?.name}</h1>
+              <h2>Speciality : {post?.attributes?.restaurant?.data?.attributes?.speciality}</h2>
+            </div>
+            <img src={`http://localhost:1337${post?.attributes?.logo_background?.data?.attributes?.url}`} alt="Logo Background" />
+          </section>
+          <section class="slogan">
+            <h1>{post?.attributes?.slogan}</h1>
+          </section>
+
+        
+          
           <h1>{post?.attributes?.description}</h1>
           <p>Opening Hours : {post?.attributes?.restaurant_opening_hours} - {post?.attributes?.restaurant_closing_hours}</p>
           <p>Opening Days : {post?.attributes?.opening_days}</p>

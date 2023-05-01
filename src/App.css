@@ -1,38 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
 .App {
-  text-align: center;
+  font-family: 'Oswald', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  height: 600px;
+  padding-left: 32px;
+  background-color: black;
+}
+
+.banner .content {
+  min-width: 270px;
+  width: 100%;
+  margin-top: 150px;
+  margin-left: 100px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.banner img {
+  width: 50vw;
+  object-fit: cover;
+  clip-path: polygon(13% 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner h1 {
+  font-size: 60px;
 }
+
+.banner h2 {
+  font-size: 30px;
+}
+
+
+.slogan {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  padding-left: 32px;
+  background-color: blue;
+  text-align: center;
+}
+
