@@ -6,16 +6,14 @@ const url = "http://localhost:1337/api/navbar?populate=*";
 
 const Navbar = () => {
   const [links, setLinks] = React.useState([]);
-  const [logoUrl, setLogoUrl] = React.useState('');
-
+  const [restaurantName, setRestaurantName] = React.useState('');
+  
   React.useEffect(() => {
     Axios.get(url)
       .then((response) => {
         const data = response.data.data.attributes;
         setLinks(data.Navbar);
-        if (response.data.data.attributes.logo) {
-          setLogoUrl(response.data.data.attributes.logo.data.attributes.formats?.medium?.url);
-        }
+        setRestaurantName(data.name.data.attributes.name);
       })
       .catch((error) => {
         console.error(error);
@@ -25,9 +23,7 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <div className="navbar-logo">
-          {logoUrl && <img src={logoUrl} alt="Logo" />}
-        </div>
+      <h1>{restaurantName}</h1>
         {links.map(link => (
           <li key={link?.id}>
             <Link to={link?.Slug}>{link?.Label}</Link>
