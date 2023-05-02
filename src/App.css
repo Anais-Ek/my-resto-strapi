@@ -34,7 +34,6 @@
   font-size: 30px;
 }
 
-
 .slogan {
   display: flex;
   justify-content: center;
@@ -48,3 +47,41 @@
   font-size: 30px;
 }
 
+.us {
+  display: flex;
+  flex-direction: row;
+  background-color: #ddd9d6  ;
+  padding: 50px;
+}
+
+.image-container {
+  width: 50%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+.text-container h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.text-container h2 {
+  font-size: 20px;
+}
+
+.text-container p {
+  font-size: 20px;
+  margin-bottom: 100px;
+  margin-top: 100px ;
+}
