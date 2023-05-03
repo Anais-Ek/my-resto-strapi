@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./css/Contact.css";
 
 const Contact = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -41,29 +42,44 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <h1>Contactez-nous</h1>
+
+    <div className='container'>
+      <div className='content'>
+      <h1>Contact us</h1>
+      <div class="side">
       <form onSubmit={handleSubmit}>
+
+        <div class="input-box">
         <label>
-          Prénom :
-          <input type="text" name="first_name" value={formData.first_name} onChange={handleChange} />
+          Nom : <input type="text" name="last_name" value={formData.last_name} onChange={handleChange} />
         </label>
+        </div>
+        
+        <div class="input-box">
+          <label>
+          Prénom : <input type="text" name="first_name" value={formData.first_name} onChange={handleChange} />
+          </label>
+        </div>
+
+        <div class="input-box">
         <label>
-          Nom :
-          <input type="text" name="last_name" value={formData.last_name} onChange={handleChange} />
+          Email :<input type="email" name="email" value={formData.email} onChange={handleChange} />
         </label>
+        </div>
+
+        <div class="input-box">
         <label>
-          Email :
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
+          Nombre de personnes :<input type="number" name="nb_of_person" value={formData.nb_of_person} onChange={handleChange} />
         </label>
+        </div>
+
+        <div class="input-box">
         <label>
-          Nombre de personnes :
-          <input type="number" name="nb_of_person" value={formData.nb_of_person} onChange={handleChange} />
+          Date et heure :<input type="datetime-local" name="date_time" value={formData.date_time} onChange={handleChange} />
         </label>
-        <label>
-          Date et heure :
-          <input type="datetime-local" name="date_time" value={formData.date_time} onChange={handleChange} />
-        </label>
+        </div>
+
+        <div class="input-box">
         <label>
         Restaurant :
         <select name="restaurant" value={formData.restaurant} onChange={handleChange}>
@@ -75,8 +91,13 @@ const Contact = () => {
         ))}
         </select>
         </label>
-        <button type="submit">Envoyer</button>
+        </div>
+        <div class="button">
+        <button type="submit">Send now</button>
+        </div>
       </form>
+    </div>
+    </div>
     </div>
   );
 };
