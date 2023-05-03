@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./Navbar.css";
+import "./css/Navbar.css";
 
 const url = "http://localhost:1337/api/navbar?populate=*";
 
