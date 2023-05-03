@@ -12,7 +12,7 @@ const App = () => {
 
       })
       .catch(error => {
-        console.error('Erreur de requête HTTP :', error);
+        console.error('Erreur de requête HTTP :', error); 
       });
   }, []); 
 
