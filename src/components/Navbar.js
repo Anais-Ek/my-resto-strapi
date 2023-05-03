@@ -25,7 +25,7 @@ const Navbar = () => {
     <header>
     <div class="logo">{restaurantName}</div>
     <nav>
-      <div class="menu">
+      <div class="navbar">
 
         {links.map(link => (
           <p key={link?.id}>

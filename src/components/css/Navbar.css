@@ -27,7 +27,7 @@ header {
   color: black;
 }
 
-.menu {
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -36,12 +36,12 @@ header {
   text-decoration:none;
 }
 
-.menu p {
+.navbar p {
   margin-right: 24px;
   text-decoration:none;
 }
 
-.menu p a {
+.navbar p a {
   text-decoration: none;
   color: #b8b4b1;
   display: inline-block;
